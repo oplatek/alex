@@ -43,6 +43,7 @@ ontology = {
         'num_transfers': set([]),
         'vehicle': set(["dontcare", "bus", "tram", "metro", "train", "cable_car", "ferry", "trolleybus"]),
         'alternative': set(['dontcare', '1', '2', '3', '4', 'last', 'next', 'prev', ]),
+        'train_name': set([]),
     },
 
     'slot_attributes': {
@@ -202,6 +203,9 @@ ontology = {
         'max_temperature': [
             'temperature',
         ],
+        'train_name': [
+            'user_informs'
+        ]
     },
     'reset_on_change': {
         # reset slots when any of the specified slots has changed, for matching changed slots a regexp is used
@@ -342,6 +346,7 @@ add_slot_values_from_database('arrival_time_rel', 'time')
 add_slot_values_from_database('time', 'time', exceptions=set(['now']))
 add_slot_values_from_database('time_rel', 'time')
 add_slot_values_from_database('date_rel', 'date_rel')
+add_slot_values_from_database('train_name', 'train_name')
 
 
 def load_compatible_values(fname, slot1, slot2):

@@ -61,6 +61,8 @@ database = {
     },
     "city": {
     },
+    "train_name": {
+    }
 }
 
 NUMBERS_1 = ["nula", "jedna", "dvě", "tři", "čtyři", "pět", "šest", "sedm",
@@ -84,6 +86,7 @@ NUMBERS_ORD = ["nultý", "první", "druhý", "třetí", "čtvrtý", "pátý", "�
 # form.
 STOPS_FNAME = "stops.expanded.txt"
 CITIES_FNAME = "cities.expanded.txt"
+TRAIN_NAMES_FNAME = "train_names.expanded.txt"
 
 # load new stops & cities list from the server if needed
 online_update(to_project_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), STOPS_FNAME)))
@@ -257,6 +260,10 @@ def add_cities():
     add_from_file('city', CITIES_FNAME)
 
 
+def add_train_names():
+    add_from_file('train_name', TRAIN_NAMES_FNAME)
+
+
 def save_c2v2f(file_name):
     c2v2f = []
     for k in database:
@@ -313,6 +320,7 @@ def save_SRILM_classes(file_name):
 add_time()
 add_stops()
 add_cities()
+add_train_names()
 
 if "dump" in sys.argv or "--dump" in sys.argv:
     save_c2v2f('database_c2v2f.txt')
