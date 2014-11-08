@@ -15,9 +15,13 @@ if __name__ == "__main__":
 
     # Models
     online_update('resources/asr/voip_en/kaldi/mfcc.conf')
-    online_update('resources/asr/voip_en/kaldi/tree')
+    online_update('resources/asr/voip_en/kaldi/phones.txt')
     online_update('resources/asr/voip_en/kaldi/silence.csl')
-    online_update('resources/asr/voip_en/kaldi/final.mat')
     online_update('resources/asr/voip_en/kaldi/tri2a.mdl')
+    online_update('resources/asr/voip_en/kaldi/tri2a.tree')
     online_update('resources/asr/voip_en/kaldi/tri2b.mdl')
-    online_update('resources/asr/voip_en/kaldi/tri2b_mmi.mdl')
+    online_update('resources/asr/voip_en/kaldi/tri2b.tree')
+    online_update('resources/asr/voip_en/kaldi/tri2b.mat')
+    online_update('resources/asr/voip_en/kaldi/tri2b_bmmi.mdl')
+    online_update('resources/asr/voip_en/kaldi/tri2b_bmmi.tree')
+    online_update('resources/asr/voip_en/kaldi/tri2b_bmmi.mat')
