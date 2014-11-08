@@ -19,6 +19,7 @@
 # See http://kaldi.sourceforge.net/graph_recipe_test.html.
 # based on egs/voxforge script created by  Vassil Panayotov Copyright 2012, Apache 2.0
 
+set -e
 source path.sh
 
 #  Alex specific parameters
